@@ -1,0 +1,19 @@
+# devctl sample config file
+# Place this file as devctl.yaml in the same directory as the binary,
+# or at ~/.devctl/devctl.yaml
+
+# GitHub settings
+github:
+  token: ""                # or set GITHUB_TOKEN env var
+  default_user: ""
+
+# Health check settings
+health:
+  timeout: 10              # seconds
+  concurrent: 5            # max concurrent checks
+
+# Default output format (table or json)
+output: "table"
+
+# Verbose output
+verbose: false

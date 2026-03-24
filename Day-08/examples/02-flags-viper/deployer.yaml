@@ -1,0 +1,14 @@
+# Sample config file for the deployer example
+# Place this file in the same directory as the binary
+
+deploy:
+  image: "myapp:v2.1.0"
+  timeout: 120
+
+services:
+  - web-frontend
+  - api-gateway
+  - user-service
+  - payment-service
+
+verbose: false

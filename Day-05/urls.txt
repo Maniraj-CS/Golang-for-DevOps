@@ -1,0 +1,7 @@
+https://google.com
+https://github.com
+https://go.dev
+https://httpbin.org/status/200
+https://httpbin.org/status/500
+https://httpbin.org/delay/10
+https://this-does-not-exist-at-all-12345.com

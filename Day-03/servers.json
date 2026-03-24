@@ -1,0 +1,58 @@
+[
+  {
+    "name": "web-01",
+    "ip": "10.0.1.10",
+    "port": 8080,
+    "env": "production",
+    "status": "running"
+  },
+  {
+    "name": "web-02",
+    "ip": "10.0.1.11",
+    "port": 8080,
+    "env": "production",
+    "status": "running"
+  },
+  {
+    "name": "api-01",
+    "ip": "10.0.1.20",
+    "port": 3000,
+    "env": "production",
+    "status": "running"
+  },
+  {
+    "name": "db-01",
+    "ip": "10.0.2.10",
+    "port": 5432,
+    "env": "production",
+    "status": "running"
+  },
+  {
+    "name": "db-02",
+    "ip": "10.0.2.11",
+    "port": 5432,
+    "env": "staging",
+    "status": "stopped"
+  },
+  {
+    "name": "cache-01",
+    "ip": "10.0.3.10",
+    "port": 6379,
+    "env": "production",
+    "status": "running"
+  },
+  {
+    "name": "dev-01",
+    "ip": "10.0.4.10",
+    "port": 8080,
+    "env": "development",
+    "status": "running"
+  },
+  {
+    "name": "test-01",
+    "ip": "10.0.4.20",
+    "port": 8080,
+    "env": "staging",
+    "status": "running"
+  }
+]

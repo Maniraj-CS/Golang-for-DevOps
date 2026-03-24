@@ -1,0 +1,92 @@
+2024-01-15 08:00:01 INFO Application starting up
+2024-01-15 08:00:02 INFO Loading configuration from /etc/app/config.yaml
+2024-01-15 08:00:02 INFO Database connection pool initialized (max: 20)
+2024-01-15 08:00:03 INFO HTTP server listening on port 8080
+2024-01-15 08:00:03 INFO Health check endpoint registered at /health
+2024-01-15 08:00:10 INFO Request received: GET /api/users (client: 10.0.1.50)
+2024-01-15 08:00:10 INFO Request completed: GET /api/users (200 OK, 45ms)
+2024-01-15 08:00:15 INFO Request received: POST /api/deploy (client: 10.0.1.55)
+2024-01-15 08:00:16 INFO Deployment started for service: payment-api
+2024-01-15 08:00:20 WARN High memory usage detected: 78% (threshold: 75%)
+2024-01-15 08:00:25 INFO Deployment completed: payment-api (took 10s)
+2024-01-15 08:00:30 INFO Request received: GET /api/health (client: 10.0.2.10)
+2024-01-15 08:00:30 INFO Health check passed: all systems operational
+2024-01-15 08:00:45 WARN Slow query detected: SELECT * FROM logs (took 2.5s)
+2024-01-15 08:00:50 INFO Cache hit ratio: 94.5%
+2024-01-15 08:01:00 INFO Request received: GET /api/metrics (client: 10.0.1.50)
+2024-01-15 08:01:01 INFO Metrics exported to Prometheus
+2024-01-15 08:01:15 ERROR Connection refused: database replica db-02 (10.0.2.11:5432)
+2024-01-15 08:01:15 WARN Failover initiated: switching to db-01
+2024-01-15 08:01:16 INFO Failover complete: now using db-01 (10.0.2.10:5432)
+2024-01-15 08:01:30 INFO Request received: POST /api/users (client: 10.0.1.60)
+2024-01-15 08:01:30 ERROR Validation failed: email field is required
+2024-01-15 08:01:45 INFO Request received: GET /api/servers (client: 10.0.1.55)
+2024-01-15 08:01:45 INFO Returned 24 servers from inventory
+2024-01-15 08:02:00 WARN Certificate expires in 7 days: *.example.com
+2024-01-15 08:02:00 WARN Certificate renewal job scheduled
+2024-01-15 08:02:15 INFO Request received: DELETE /api/cache (client: 10.0.1.50)
+2024-01-15 08:02:15 INFO Cache cleared: 1,245 keys removed
+2024-01-15 08:02:30 INFO Cron job started: cleanup-old-logs
+2024-01-15 08:02:35 INFO Cron job completed: cleanup-old-logs (removed 89 files)
+2024-01-15 08:02:45 ERROR Disk space critical: /var/log is 95% full
+2024-01-15 08:02:45 WARN Alert sent to ops-team Slack channel
+2024-01-15 08:03:00 INFO Request received: PUT /api/config (client: 10.0.1.55)
+2024-01-15 08:03:01 INFO Configuration updated: max_connections changed from 20 to 50
+2024-01-15 08:03:15 ERROR Timeout waiting for response from payment-gateway (30s exceeded)
+2024-01-15 08:03:15 WARN Retrying payment-gateway request (attempt 1/3)
+2024-01-15 08:03:20 WARN Retrying payment-gateway request (attempt 2/3)
+2024-01-15 08:03:25 WARN Retrying payment-gateway request (attempt 3/3)
+2024-01-15 08:03:25 ERROR Payment gateway unreachable after 3 retries
+2024-01-15 08:03:30 INFO Circuit breaker activated for payment-gateway
+2024-01-15 08:03:45 INFO Request received: GET /api/users/123 (client: 10.0.1.60)
+2024-01-15 08:03:45 INFO Request completed: GET /api/users/123 (200 OK, 12ms)
+2024-01-15 08:04:00 INFO Scheduled backup started: postgres-main
+2024-01-15 08:04:30 INFO Backup completed: postgres-main (size: 2.4GB, took 30s)
+2024-01-15 08:04:45 WARN Memory usage still high: 82% (threshold: 75%)
+2024-01-15 08:04:45 INFO Garbage collection triggered manually
+2024-01-15 08:04:46 INFO Memory after GC: 61%
+2024-01-15 08:05:00 INFO Request received: GET /api/deploy/status (client: 10.0.1.55)
+2024-01-15 08:05:00 INFO All deployments healthy
+2024-01-15 08:05:15 ERROR Cannot connect to Redis: connection refused (10.0.3.10:6379)
+2024-01-15 08:05:15 WARN Cache layer degraded: falling back to database
+2024-01-15 08:05:30 INFO Redis reconnection attempt started
+2024-01-15 08:05:32 INFO Redis reconnected successfully
+2024-01-15 08:05:32 INFO Cache layer restored
+2024-01-15 08:05:45 INFO Request received: POST /api/webhook (client: external)
+2024-01-15 08:05:45 INFO Webhook processed: GitHub push event for repo devops-tools
+2024-01-15 08:06:00 INFO Auto-scaling check: current instances = 3, CPU avg = 45%
+2024-01-15 08:06:00 INFO No scaling action needed
+2024-01-15 08:06:15 WARN API rate limit approaching: 850/1000 requests in current window
+2024-01-15 08:06:30 ERROR DNS resolution failed for api.external-service.com
+2024-01-15 08:06:30 WARN External service integration temporarily disabled
+2024-01-15 08:06:45 INFO Request received: GET /api/logs (client: 10.0.1.50)
+2024-01-15 08:06:45 INFO Returned 500 log entries (page 1 of 10)
+2024-01-15 08:07:00 INFO SSL handshake completed with client 10.0.1.70
+2024-01-15 08:07:00 INFO New WebSocket connection established (client: 10.0.1.70)
+2024-01-15 08:07:15 ERROR Out of memory: container payment-worker exceeded 512MB limit
+2024-01-15 08:07:15 WARN Container payment-worker restarting (restart count: 3)
+2024-01-15 08:07:20 INFO Container payment-worker started successfully
+2024-01-15 08:07:30 INFO Kubernetes pod health check passed: all 12 pods running
+2024-01-15 08:07:45 INFO Request received: POST /api/deploy (client: 10.0.1.55)
+2024-01-15 08:07:45 INFO Deployment started for service: user-api (version: v2.3.1)
+2024-01-15 08:07:50 INFO Rolling update: 1/4 pods updated
+2024-01-15 08:07:55 INFO Rolling update: 2/4 pods updated
+2024-01-15 08:08:00 INFO Rolling update: 3/4 pods updated
+2024-01-15 08:08:05 INFO Rolling update: 4/4 pods updated
+2024-01-15 08:08:05 INFO Deployment completed: user-api v2.3.1 (took 20s)
+2024-01-15 08:08:15 WARN Deprecated API endpoint called: /api/v1/servers (use /api/v2/servers)
+2024-01-15 08:08:30 INFO Request received: GET /api/v2/servers (client: 10.0.1.60)
+2024-01-15 08:08:30 INFO Returned 24 servers (v2 API)
+2024-01-15 08:08:45 ERROR Connection pool exhausted: max 50 connections reached
+2024-01-15 08:08:45 WARN Queuing incoming requests (queue depth: 12)
+2024-01-15 08:08:50 INFO Connection pool recovered: 35/50 connections in use
+2024-01-15 08:09:00 INFO Minute metrics: requests=145, errors=8, avg_latency=67ms
+2024-01-15 08:09:00 INFO System load: CPU 42%, Memory 65%, Disk 71%
+2024-01-15 08:09:15 ERROR TLS certificate validation failed for upstream proxy
+2024-01-15 08:09:15 WARN Upstream proxy connection using fallback route
+2024-01-15 08:09:30 INFO Request received: POST /api/alerts/acknowledge (client: 10.0.1.55)
+2024-01-15 08:09:30 INFO Alert acknowledged: disk-space-critical (by: ops-engineer)
+2024-01-15 08:09:45 INFO Log rotation triggered: server.log (size: 104MB)
+2024-01-15 08:09:45 INFO Log rotation complete: archived as server.log.2024-01-15.gz
+2024-01-15 08:10:00 INFO Health check passed: all systems operational
+2024-01-15 08:10:00 INFO Uptime: 45 days, 12 hours, 30 minutes
