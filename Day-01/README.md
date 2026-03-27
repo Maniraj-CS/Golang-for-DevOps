@@ -91,7 +91,7 @@ What is happening here:
 
 ## 4. Data Types
 
-Go is a statically typed language. Matlab hai bhai, you have to tell Go what type of data you are storing.
+Go is a statically typed language. which means, you have to tell Go what type of data you are storing.
 
 ### Basic types:
 
