@@ -1,168 +1,328 @@
-# Golang for DevOps 
+ <div align="center">
 
-## Who is this for?
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=00ADD8&center=true&vCenter=true&width=700&lines=Golang+for+DevOps;Build+Tools+That+Solve+Real+Problems;Learn+Go+Through+Practical+Projects" alt="Go for DevOps animation" />
 
-- DevOps engineers who write Bash/Python scripts and want to level up
-- SREs who want to build reliable tooling
-- Anyone who wants to automate infra stuff using Go
+<p>
+  Practical Go notes for Linux automation, cloud tooling, APIs, and infrastructure operations.
+</p>
 
-## What we will NOT do
+<a href="https://go.dev/">
+  <img src="https://img.shields.io/badge/Language-Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
+</a>
+<a href="https://pkg.go.dev/">
+  <img src="https://img.shields.io/badge/Documentation-Go_Packages-64748B?style=flat-square&logo=go&logoColor=white" alt="Go Packages" />
+</a>
+<a href="https://github.com/spf13/cobra">
+  <img src="https://img.shields.io/badge/CLI-Cobra-475569?style=flat-square" alt="Cobra CLI" />
+</a>
 
-- We won't cover every Go concept out there
-- No web frameworks, no frontend stuff
-- No DSA, no competitive programming
-
-## What we WILL do
-
-- Learn Go by building real DevOps tools
-- Every episode = one concept + one hands-on project
-- By the end, you will be mass confident writing Go for your day-to-day DevOps work
-
----
-
-## Course Syllabus
-
-### Day-01 - Go Setup, Data Types and Your First CLI Tool
-
-**Concepts:**
-- Installing Go 1.26, understanding `go env`
-- Go project structure, go modules (`go mod init`)
-- Data types - string, int, float64, bool
-- Variables - `var`, short declaration `:=`, constants
-- fmt package - Println, Printf, Sprintf
-- Taking user input with `fmt.Scan` and `os.Args`
-
-**Project:** Build a simple CLI tool that checks if a given port is open or not on localhost
-
-<a href="./Day-01/"></a>
----
-
-### Day-02 - Conditionals, Loops and Functions
-
-**Concepts:**
-- if-else, switch case
-- for loop (the only loop in Go!), range
-- Range over integers (`for i := range 10`)
-- Slices and arrays - declaration, append, iterate
-- Maps - key-value pairs, checking if key exists
-- Functions - multiple return values, named returns
-- Pointers basics - what is `&` and `*`, why it matters
-
-**Project:** Build a log file analyzer that reads a server log file, counts ERROR vs WARN vs INFO lines, and prints a summary report
+</div>
 
 ---
 
-### Day-03 - Structs, Interfaces and JSON
+## About This Repository
 
-**Concepts:**
-- Structs - defining, creating, nested structs
-- Methods on structs (receiver functions)
-- Interfaces - what they are, why they matter
-- JSON marshal/unmarshal, struct tags (`json:"name"`, `omitempty`, `omitzero`)
-- Reading and writing JSON config files
+This repository focuses on learning Go by building practical tools for DevOps work.
 
-**Project:** Build a tool that reads a JSON config file (list of servers with IP, role, environment) and prints a nicely formatted table. Use interfaces to support both JSON and YAML config formats
+Instead of studying every Go concept, the focus is on writing command-line tools, automating system tasks, working with APIs, checking service health, and interacting with cloud-native infrastructure.
 
----
+## Who Is This For?
 
-### Day-04 - File I/O, Error Handling and Packages
+- DevOps learners who want to move beyond Bash and Python scripts.
+- SRE learners who want to build reliable automation tools.
+- Developers interested in infrastructure and cloud automation.
 
-**Concepts:**
-- os package - reading, writing, appending files
-- bufio for reading files line by line
-- Error handling - the Go way (`if err != nil`)
-- Custom errors, error wrapping with `fmt.Errorf`
-- `errors.As`, `errors.Is`, and `errors.AsType`
-- Creating your own packages, importing them
-- init() function
+## Learning Approach
 
-**Project:** Build a server log parser that reads large log files, filters by severity level, and writes the output to a new file. Handle all edge cases like file not found, permission denied, etc.
+- Learn concepts through practical examples.
+- Build a working tool for each major topic.
+- Practice error handling and maintainable code.
+- Combine the concepts into a final DevOps project.
 
----
+## Table of Contents
 
-### Day-05 - HTTP Calls, Health Checks and Goroutines
-
-**Concepts:**
-- net/http package - GET requests, reading response body
-- Status codes, timeouts, headers
-- Goroutines - what are they, how to launch them
-- sync.WaitGroup - waiting for goroutines to finish
-- `sync.WaitGroup.Go` method - cleaner way to launch goroutines
-- Channels basics - sending and receiving data
-- Why concurrency is a superpower for DevOps
-
-**Project:** Build a website health checker that pings a list of URLs concurrently using goroutines and reports which ones are up/down with response time
+| Section | Topics |
+|---|---|
+| [Go Fundamentals](#go-fundamentals) | Setup, variables, data types, control flow, functions |
+| [Core Go Concepts](#core-go-concepts) | Slices, maps, pointers, structs, interfaces, JSON |
+| [System Automation](#system-automation) | Files, errors, packages, system commands |
+| [Networking and APIs](#networking-and-apis) | HTTP, health checks, concurrency, REST APIs |
+| [CLI Development](#cli-development) | Cobra, Viper, flags, Go binaries |
+| [Cloud-Native Tools](#cloud-native-tools) | Docker SDK, Kubernetes client-go |
+| [Capstone Project](#capstone-project) | Build a Kubernetes status tool |
 
 ---
 
-### Day-06 - Running System Commands from Go
+## Learning Projects
 
-**Concepts:**
-- os/exec package - running shell commands
-- Capturing stdout, stderr
-- Setting environment variables from code
-- Working with filepath package
-- Defer, panic, recover
-- String manipulation - strings package, regexp basics
+<div align="center">
+<table>
+<tr>
+<td width="50%" valign="top">
 
-**Project:** Build a system info collector that runs commands like `df -h`, `free -m`, `uptime`, parses the output, and gives a clean JSON/table report
+### 🟦 Go Fundamentals
+
+Learn the basic building blocks of Go and create your first command-line tool.
+
+**Topics covered:**
+
+- Go installation and `go env`
+- Variables, constants, and data types
+- Go modules and project structure
+- User input and command-line arguments
+- `fmt` and `os` packages
+
+**Project:** Build a localhost port checker.
+
+<a href="./Day-01/">
+<img src="https://img.shields.io/badge/Explore_Fundamentals-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Explore Go Fundamentals" />
+</a>
+
+</td>
+<td width="50%" valign="top">
+
+### 🔁 Control Flow and Functions
+
+Use conditions, loops, collections, and functions to process data.
+
+**Topics covered:**
+
+- `if`, `else`, and `switch`
+- `for` and `range`
+- Arrays, slices, and maps
+- Multiple return values
+- Pointer basics
+
+**Project:** Build a server log analyzer.
+
+<a href="./Day-02/">
+<img src="https://img.shields.io/badge/Explore_Control_Flow-64748B?style=for-the-badge&logo=go&logoColor=white" alt="Explore Control Flow" />
+</a>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🧩 Structs, Interfaces and JSON
+
+Organize data and work with configuration files.
+
+**Topics covered:**
+
+- Structs and methods
+- Interfaces
+- JSON encoding and decoding
+- Struct tags
+- Reading configuration files
+
+**Project:** Build a server configuration viewer supporting JSON and YAML.
+
+<a href="./Day-03/">
+<img src="https://img.shields.io/badge/Explore_Data_Handling-0D9488?style=for-the-badge&logo=go&logoColor=white" alt="Explore Data Handling" />
+</a>
+
+</td>
+<td width="50%" valign="top">
+
+### 📁 File Handling and Errors
+
+Build tools that read, process, and write files reliably.
+
+**Topics covered:**
+
+- File operations with `os`
+- Line-by-line reading with `bufio`
+- Error wrapping and custom errors
+- `errors.Is` and `errors.As`
+- Packages and `init()`
+
+**Project:** Build a log parser with severity filtering and error handling.
+
+<a href="./Day-04/">
+<img src="https://img.shields.io/badge/Explore_File_Handling-9333EA?style=for-the-badge&logo=go&logoColor=white" alt="Explore File Handling" />
+</a>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🌐 Networking and Concurrency
+
+Check services and perform network requests efficiently.
+
+**Topics covered:**
+
+- HTTP requests and response codes
+- Timeouts and headers
+- Goroutines and channels
+- `sync.WaitGroup`
+- Concurrent task execution
+
+**Project:** Build a concurrent website health checker.
+
+<a href="./Day-05/">
+<img src="https://img.shields.io/badge/Explore_Health_Checks-2563EB?style=for-the-badge&logo=go&logoColor=white" alt="Explore Health Checks" />
+</a>
+
+</td>
+<td width="50%" valign="top">
+
+### 🖥️ System Automation
+
+Use Go to run system commands and collect machine information.
+
+**Topics covered:**
+
+- Running commands with `os/exec`
+- Capturing standard output and errors
+- Environment variables
+- File paths and string processing
+- `defer`, `panic`, and `recover`
+
+**Project:** Build a system information collector that produces a JSON or table report.
+
+<a href="./Day-06/">
+<img src="https://img.shields.io/badge/Explore_System_Tools-475569?style=for-the-badge&logo=linux&logoColor=white" alt="Explore System Tools" />
+</a>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🔌 REST API Development
+
+Connect Go tools to external services and expose your own endpoints.
+
+**Topics covered:**
+
+- GET, POST, PUT, and DELETE
+- Authentication headers and tokens
+- Nested JSON responses
+- HTTP handlers and `http.ServeMux`
+- Environment-based configuration
+
+**Project:** Build a GitHub API CLI and a local `/repos` endpoint.
+
+<a href="./Day-07/">
+<img src="https://img.shields.io/badge/Explore_REST_APIs-16A34A?style=for-the-badge&logo=go&logoColor=white" alt="Explore REST APIs" />
+</a>
+
+</td>
+<td width="50%" valign="top">
+
+### ⚙️ CLI Application Development
+
+Combine your tools into a reusable command-line application.
+
+**Topics covered:**
+
+- Cobra commands and subcommands
+- Flags and configuration with Viper
+- Persistent and local flags
+- Go tool dependencies
+- Building and cross-compiling binaries
+
+**Project:** Build `devctl` with health, sysinfo, and GitHub commands.
+
+<a href="./Day-08/">
+<img src="https://img.shields.io/badge/Explore_CLI_Development-F59E0B?style=for-the-badge&logo=go&logoColor=white" alt="Explore CLI Development" />
+</a>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🐳 Docker and Kubernetes
+
+Interact with containers and Kubernetes resources from Go.
+
+**Topics covered:**
+
+- Docker SDK for Go
+- Containers and images
+- Kubernetes `client-go`
+- Pods, deployments, and services
+- Contexts and timeouts
+
+**Project:** Build a tool to inspect Docker containers and Kubernetes resources.
+
+<a href="./Day-09/">
+<img src="https://img.shields.io/badge/Explore_Cloud_Native-0EA5E9?style=for-the-badge&logo=docker&logoColor=white" alt="Explore Cloud Native" />
+</a>
+
+</td>
+<td width="50%" valign="top">
+
+### 🚀 Capstone: Kubernetes Status Tool
+
+Combine the course concepts into a practical Kubernetes CLI tool.
+
+**Topics covered:**
+
+- Cobra CLI and command flags
+- Kubernetes API integration
+- Concurrent resource fetching
+- Error handling and JSON output
+- Terminal status formatting
+
+**Project:** Build `kubectl-status` to display resources and highlight unhealthy workloads.
+
+<a href="./Day-10/">
+<img src="https://img.shields.io/badge/Explore_Capstone-DC2626?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Explore Capstone Project" />
+</a>
+
+</td>
+</tr>
+</table>
+</div>
 
 ---
 
-### Day-07 - Working with REST APIs
+## What You Will Build
 
-**Concepts:**
-- Making POST, PUT, DELETE requests
-- Setting headers, auth tokens
-- Parsing nested JSON responses
-- Building a simple HTTP server with `http.HandleFunc` and `http.ServeMux` patterns
-- Serving JSON responses
-- Environment variables with `os.Getenv`
+By working through these topics, you will practice building:
 
-**Project:** Build a tool that talks to GitHub API - list your repos, check last commit date, create a new issue from terminal. Also expose a simple `/repos` API endpoint locally
+- A port checker for localhost.
+- A server log analyzer and parser.
+- A configuration file viewer.
+- A concurrent website health checker.
+- A system information collector.
+- A GitHub API command-line tool.
+- A reusable `devctl` CLI.
+- A Docker and Kubernetes resource inspector.
+- A Kubernetes status plugin.
 
----
+## Capstone Project
 
-### Day-08 - Building a Full CLI App with Cobra
+The final project is `kubectl-status`, a tool designed to show Kubernetes resources in a clear terminal view.
 
-**Concepts:**
-- Cobra library - why every big Go tool uses it
-- Subcommands, flags (string, bool, int flags)
-- Persistent flags vs local flags
-- Reading from config file using Viper
-- `go tool` directive in go.mod - tracking tool dependencies
-- Building and distributing Go binaries (cross-compilation with `GOOS` and `GOARCH`)
+Planned features:
 
-**Project:** Build a DevOps swiss knife CLI called `devctl` with subcommands like `devctl health`, `devctl sysinfo`, `devctl github` - combining what we built in earlier episodes into one proper tool
-
----
-
-### Day-09 - Docker and Kubernetes from Go
-
-**Concepts:**
-- Docker SDK for Go - connecting to Docker daemon
-- Listing containers, images, pulling images
-- Kubernetes client-go basics
-- Listing pods, deployments, services
-- Context and timeout in Go
-- Container-aware `GOMAXPROCS` - how Go behaves inside containers
-
-**Project:** Build a tool that lists running Docker containers with their resource usage, and optionally connects to a K8s cluster to list pods and their status
+- Display pods, deployments, and services.
+- Highlight unhealthy pods and restart issues.
+- Fetch resources concurrently.
+- Filter resources by namespace.
+- Support table and JSON output.
+- Build a standalone binary that can be installed in `PATH` and used as a kubectl plugin.
 
 ---
 
-### Day-10 - Capstone Project: Build Your Own Kubectl Plugin (Beginner Friendly!)
+## Scope of This Repository
 
-**Concepts:** Bringing it ALL together - structs, interfaces, goroutines, JSON, Cobra CLI, error handling, Kubernetes client-go, color-coded terminal output, cross-compilation
+**Included:** Go fundamentals, system automation, CLI tools, HTTP APIs, concurrency, Docker, Kubernetes, and practical DevOps projects.
 
-**Project:** Build a real kubectl plugin called `kubectl-status` that:
-- Shows pods, deployments, and services in one clean, color-coded view (🟢🟡🔴)
-- Highlights unhealthy pods, CrashLoopBackOff, and restart loops
-- Fetches all resources concurrently using goroutines (fast!)
-- Supports namespace filtering with `-n` flag
-- Outputs as table (default) or JSON (`-o json`)
-- Works as a standalone binary AND as a kubectl plugin (`kubectl status`)
-- Installable by just copying the binary to your PATH — that's how kubectl plugins work!
-- Uses concepts from every single day of this course
+**Not included:** Frontend development, web frameworks as a primary focus, exhaustive coverage of every Go feature, or competitive programming.
 
 ---
+
+<div align="center">
+
+**Learn Go. Build Tools. Automate Infrastructure.**
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f172a,100:164e63&height=3&section=footer" width="100%" alt="" />
+
+</div>
