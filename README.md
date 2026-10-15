@@ -34,6 +34,7 @@
 
 **Project:** Build a simple CLI tool that checks if a given port is open or not on localhost
 
+<a href="./Day-01/"></a>
 ---
 
 ### Day-02 - Conditionals, Loops and Functions
